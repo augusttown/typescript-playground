@@ -3,23 +3,33 @@
   <head>
     <meta charset="UTF-8">
     <title>Playground</title>
-    <!--<script src="../../node_modules/systemjs/dist/system.js"></script>-->
+
+    <script src="../../node_modules/systemjs/dist/system.js"></script>
+
     <script src="testBasicLibrary.js"></script>
     <script src="testBasicTypeScript.js"></script>
+
   </head>
 
   <body>
 
     <script>
-      // test modules import/export with systemjs
-      /*SystemJS.config({
-        baseURL:'/'
+
+      // module load with systemjs
+      SystemJS.config({
+        baseURL:'/',
+        map: {
+          localbase: './',
+          lodash: '../../node_modules/lodash/lodash.min.js',
+          d3: '../../node_modules/d3/build/d3.js'
+        }
       });
-      SystemJS.import('./testBasicModuleImport.js').then(function(){
+      SystemJS.import('localbase/testBasicModuleImport.js').then(function(){
         console.log('loaded');
       }).catch(function(err){
         console.error(err);
-      });*/
+      });
+
     </script>
 
     <input type="text" id="input1"/>

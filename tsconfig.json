@@ -1,15 +1,16 @@
 {
   "compileOnSave": true,
+  //"include": ["./app/src/**/*"],
   "compilerOptions": {
     //"outDir": "./dist/out-tsc",
     "sourceMap": true,
     //"declaration": false,
-    "module": "commonjs",
-    //"moduleResolution": "node",
+    "module": "system",
+    "moduleResolution": "node",
     //"emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
-    "noImplicitAny": true,
+    //"noImplicitAny": true,
     //"strictNullChecks": true,
     "typeRoots": [
       "node_modules/@types"
