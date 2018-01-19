@@ -6,15 +6,12 @@
 
     <script src="../../node_modules/systemjs/dist/system.js"></script>
 
-    <script src="testBasicLibrary.js"></script>
-    <script src="testBasicTypeScript.js"></script>
-
+    <!--<script src="testBasicTypeScript.js"></script>-->
   </head>
 
   <body>
 
     <script>
-
       // module load with systemjs
       SystemJS.config({
         baseURL:'/',
@@ -24,16 +21,14 @@
           d3: '../../node_modules/d3/build/d3.js'
         }
       });
-      SystemJS.import('localbase/testBasicModuleImport.js').then(function(){
+
+      SystemJS.import('localbase/main.js').then(function(){
         console.log('loaded');
       }).catch(function(err){
         console.error(err);
       });
 
     </script>
-
-    <input type="text" id="input1"/>
-    <input type="button" id="btn1" value="Test" onclick="main()"/>
 
   </body>
 
